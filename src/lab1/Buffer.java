@@ -23,7 +23,7 @@ public class Buffer {
         buff = null;
         empty = true;
         notifyAll();
-        return buff;
+        return ans;
     }
 
     public synchronized void put(String s) {
