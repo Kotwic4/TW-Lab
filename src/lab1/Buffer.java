@@ -1,6 +1,6 @@
 package lab1;
 
-public class Buffer {
+public class Buffer implements IBuffer{
 
     private String buff;
 

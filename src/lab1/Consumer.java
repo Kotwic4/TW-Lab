@@ -1,10 +1,10 @@
 package lab1;
 
 public class Consumer implements Runnable {
-    private Buffer buffer;
+    private IBuffer buffer;
     private int times;
 
-    public Consumer(Buffer buffer, int times) {
+    public Consumer(IBuffer buffer, int times) {
         this.buffer = buffer;
         this.times = times;
     }

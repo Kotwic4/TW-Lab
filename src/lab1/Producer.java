@@ -1,10 +1,10 @@
 package lab1;
 
 public class Producer implements Runnable {
-    private Buffer buffer;
+    private IBuffer buffer;
     private int times;
 
-    public Producer(Buffer buffer, int times) {
+    public Producer(IBuffer buffer, int times) {
         this.buffer = buffer;
         this.times = times;
     }
