@@ -6,16 +6,16 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class BoundedBuffer implements IBuffer{
+public class BoundedBuffer<T>{
 
     private final Lock lock = new ReentrantLock();
     private final Condition notFull  = lock.newCondition();
     private final Condition notEmpty = lock.newCondition();
-    private final String[] items;
+    private final T[] items;
     private int putptr, takeptr, count;
 
     public BoundedBuffer(int size){
-        items = new String[size];
+        items = (T[]) new Object[size];
         for(int i = 0; i < size; i++){
             items[i] = null;
         }
@@ -24,13 +24,12 @@ public class BoundedBuffer implements IBuffer{
         takeptr = 0;
     }
 
-    @Override
-    public String take() {
+    public T take() {
         lock.lock();
         try {
             while (count == 0)
                 notEmpty.await();
-            String x = items[takeptr];
+            T x = items[takeptr];
             if (++takeptr == items.length) takeptr = 0;
             --count;
             notFull.signal();
@@ -43,8 +42,7 @@ public class BoundedBuffer implements IBuffer{
         }
     }
 
-    @Override
-    public void put(String s) {
+    public void put(T s) {
         lock.lock();
         try {
             while (count == items.length)
