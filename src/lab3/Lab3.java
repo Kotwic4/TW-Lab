@@ -37,6 +37,20 @@ public class Lab3 {
     }
 
     private static void ex3(){
-
+        Thread[] clients = new Thread[6];
+        IWaiter waiter = new Waiter(5);
+        for(int i = 0; i < clients.length; i++){
+            clients[i] = new Thread(new Client(waiter,i,3));
+        }
+        for (Thread client: clients) {
+            client.start();
+        }
+        for (Thread client: clients) {
+            try {
+                client.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
