@@ -7,7 +7,8 @@ import lab1.Producer;
 public class Lab3 {
     public static void main(){
         //ex1();
-        ex2();
+        //ex2();
+        ex3();
     }
 
     private static void ex2() {
@@ -33,5 +34,9 @@ public class Lab3 {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    private static void ex3(){
+
     }
 }
