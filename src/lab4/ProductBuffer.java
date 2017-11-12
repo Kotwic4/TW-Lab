@@ -2,21 +2,21 @@ package lab4;
 
 public class ProductBuffer {
 
-    Product[] products;
+    FactoryProduct[] factoryProducts;
     int end;
     public Integer count;
 
     ProductBuffer(int size){
-        this.products = new Product[size];
+        this.factoryProducts = new FactoryProduct[size];
         for(int i = 0; i < size; i++){
-            products[i] = new Product(-1);
+            factoryProducts[i] = new FactoryProduct(-1);
         }
         this.count = 0;
         this.end = 0;
     }
 
-    public Product[] getProducts() {
-        return products;
+    public FactoryProduct[] getFactoryProducts() {
+        return factoryProducts;
     }
 
     public int getEnd() {

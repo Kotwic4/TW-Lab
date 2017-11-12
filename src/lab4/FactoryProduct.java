@@ -1,10 +1,10 @@
 package lab4;
 
-public class Product {
+public class FactoryProduct {
 
     int status;
 
-    public Product(int status) {
+    public FactoryProduct(int status) {
         this.status = status;
     }
 

@@ -2,13 +2,13 @@ package lab4;
 
 import java.util.Random;
 
-public class Consumer implements Runnable {
+public class Producer implements Runnable {
     private int m;
     private IBuffer buffer;
     private Timer timer;
     private Random random = new Random();
 
-    public Consumer(int m, IBuffer buffer, Timer timer) {
+    public Producer(int m, IBuffer buffer, Timer timer) {
         this.m = m;
         this.buffer = buffer;
         this.timer = timer;
@@ -19,12 +19,12 @@ public class Consumer implements Runnable {
         while(true){
             Long start = System.nanoTime();
             try {
-                buffer.get(random.nextInt(m));
+                buffer.put(random.nextInt(m));
             } catch (EndTaskException e) {
                 break;
             }
             Long end = System.nanoTime();
-            timer.get(end-start);
+            timer.put(end-start);
         }
     }
 }
