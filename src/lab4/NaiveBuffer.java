@@ -47,7 +47,7 @@ public class NaiveBuffer implements IBuffer {
     public void put(int value) throws EndTaskException {
         lock.lock();
         try {
-            while(!end && m*m - available < value) {
+            while(!end && 2*m - available < value) {
                 prod.await();
             }
             if(operations >= maxOperations) throw new EndTaskException();

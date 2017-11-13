@@ -38,7 +38,7 @@ public class Lab4 {
     }
 
     private static void naiveTest(int n, int m){
-        IBuffer buffer = new NaiveBuffer(m,1000000);
+        IBuffer buffer = new NaiveBuffer(m,100000);
         Timer timer = new Timer();
         test(n,m,buffer,timer);
         System.out.println(String.format("Naive n:%d, m:%d, getSum:%d, getCount:%d, putSum:%d, putCount:%d",
@@ -46,7 +46,7 @@ public class Lab4 {
     }
 
     private static void betterTest(int n, int m){
-        IBuffer buffer = new Buffer(m,1000000);
+        IBuffer buffer = new Buffer(m,100000);
         Timer timer = new Timer();
         test(n,m,buffer,timer);
         System.out.println(String.format("Better n:%d, m:%d, getSum:%d, getCount:%d, putSum:%d, putCount:%d",

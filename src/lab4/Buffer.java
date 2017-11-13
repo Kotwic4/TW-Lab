@@ -45,9 +45,7 @@ public class Buffer implements IBuffer {
             cons.signal();
             firstProd.signal();
             if (operations >= maxOperations){
-                end = true;
-                prod.signalAll();
-                cons.signalAll();
+                signalAll();
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -64,7 +62,7 @@ public class Buffer implements IBuffer {
                 prod.await();
             }
             firstProdFlag = true;
-            while (m * m - available < value && !end) {
+            while (2 * m - available < value && !end) {
                 firstProd.await();
             }
             if (operations >= maxOperations){
@@ -76,14 +74,20 @@ public class Buffer implements IBuffer {
             prod.signal();
             firstCons.signal();
             if (operations >= maxOperations){
-                end = true;
-                prod.signalAll();
-                cons.signalAll();
+                signalAll();
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
             lock.unlock();
         }
+    }
+
+    private void signalAll(){
+        end = true;
+        prod.signalAll();
+        cons.signalAll();
+        firstProd.signalAll();
+        firstCons.signalAll();
     }
 }
