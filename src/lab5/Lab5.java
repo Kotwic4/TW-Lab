@@ -9,7 +9,7 @@ public class Lab5
 {
     public static void main(){
         int[] maxIters = {800,200,100};
-        int[] threadNumbers = {400, 200, 100 , 10};
+        int[] threadNumbers = {1,2,4,20};
         for(int maxIter : maxIters){
             for(int threadNumber : threadNumbers){
                 test(maxIter,threadNumber);
