@@ -3,6 +3,7 @@ import lab2.Lab2;
 import lab3.Lab3;
 import lab4.Lab4;
 import lab5.Lab5;
+import lab6.Lab6;
 
 public class Main {
 
@@ -11,6 +12,7 @@ public class Main {
         //Lab2.main();
         //Lab3.main();
         //Lab4.main();
-        Lab5.main();
+        //Lab5.main();
+        Lab6.main();
     }
 }
