@@ -1,5 +1,8 @@
 let waterfall = require("async/waterfall");
 
+let forkWait = 0;
+let condWait = 0;
+
 let Fork = function() {
     this.state = 0;
     return this;
@@ -12,6 +15,7 @@ Fork.prototype.acquire = function(cb) {
     // 2. gdy proba jest nieudana, zwieksza czas oczekiwania dwukrotnie
     //    i ponawia probe itd.
     let wait = function (cb, waitTime, fork) {
+        forkWait += waitTime;
         if(fork.state === 0){
             fork.state = 1;
             cb();
@@ -21,6 +25,7 @@ Fork.prototype.acquire = function(cb) {
         }
     };
     let initWaitTime = 1;
+    forkWait+=initWaitTime;
     let fork = this;
     setTimeout(function() {wait(cb,initWaitTime*2,fork);}, initWaitTime);
 };
@@ -41,6 +46,7 @@ Conductor.prototype.acquire = function(cb) {
     // 2. gdy proba jest nieudana, zwieksza czas oczekiwania dwukrotnie
     //    i ponawia probe itd.
     let wait = function (cb, waitTime, cond) {
+        condWait += waitTime;
         if(cond.state > 0){
             cond.state--;
             cb();
@@ -51,6 +57,7 @@ Conductor.prototype.acquire = function(cb) {
     };
     let initWaitTime = 1;
     let cond = this;
+    condWait+= initWaitTime;
     setTimeout(function() {wait(cb,initWaitTime*2,cond);}, initWaitTime);
 };
 
@@ -140,10 +147,13 @@ Philosopher.prototype.startAsym = function(count) {
         task.push(function(cb){console.log("Mam prawy widelec " + id); cb()});
         task.push(function (cb){ jedz(cb,forks[f1],forks[f2],id)} );
     }
-    waterfall(task,function(err,result){console.log("done " + id);})
+    waterfall(task,function(err,result){
+        console.log("done " + id);
+        console.log("fork " + forkWait);
+        console.log("cond " + condWait);})
 };
 
-let N = 5;
+let N = 10;
 let cond = new Conductor(N);
 
 Philosopher.prototype.startConductor = function(count) {
@@ -179,7 +189,10 @@ Philosopher.prototype.startConductor = function(count) {
         task.push(function (cb){ jedz(cb,forks[f1],forks[f2],id)} );
         task.push(function (cb){ cond.release(); cb()} );
     }
-    waterfall(task,function(err,result){console.log("done " + id);})
+    waterfall(task,function(err,result){
+        console.log("done " + id);
+        console.log("fork " + forkWait);
+        console.log("cond " + condWait);})
 };
 
 let forks = [];
