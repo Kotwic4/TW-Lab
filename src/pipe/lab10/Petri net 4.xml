@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><pnml>
+<net id="Net-One" type="P/T net">
+<token id="Default" enabled="true" red="0" green="0" blue="0"/>
+<place id="Proces1">
+<graphics>
+<position x="285.0" y="90.0"/>
+</graphics>
+<name>
+<value>Proces1</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,1</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="Proces1Z">
+<graphics>
+<position x="330.0" y="255.0"/>
+</graphics>
+<name>
+<value>Proces1Z</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="Proces2">
+<graphics>
+<position x="660.0" y="90.0"/>
+</graphics>
+<name>
+<value>Proces2</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,1</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="Proces2Z">
+<graphics>
+<position x="630.0" y="270.0"/>
+</graphics>
+<name>
+<value>Proces2Z</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,0</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<place id="Zasob">
+<graphics>
+<position x="465.0" y="105.0"/>
+</graphics>
+<name>
+<value>Zasob</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</name>
+<initialMarking>
+<value>Default,1</value>
+<graphics>
+<offset x="0.0" y="0.0"/>
+</graphics>
+</initialMarking>
+<capacity>
+<value>0</value>
+</capacity>
+</place>
+<transition id="T0">
+<graphics>
+<position x="375.0" y="120.0"/>
+</graphics>
+<name>
+<value>T0</value>
+<graphics>
+<offset x="-5.0" y="35.0"/>
+</graphics>
+</name>
+<orientation>
+<value>0</value>
+</orientation>
+<rate>
+<value>1.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="T1">
+<graphics>
+<position x="435.0" y="210.0"/>
+</graphics>
+<name>
+<value>T1</value>
+<graphics>
+<offset x="-5.0" y="35.0"/>
+</graphics>
+</name>
+<orientation>
+<value>0</value>
+</orientation>
+<rate>
+<value>1.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="T2">
+<graphics>
+<position x="555.0" y="120.0"/>
+</graphics>
+<name>
+<value>T2</value>
+<graphics>
+<offset x="-5.0" y="35.0"/>
+</graphics>
+</name>
+<orientation>
+<value>0</value>
+</orientation>
+<rate>
+<value>1.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<transition id="T3">
+<graphics>
+<position x="510.0" y="210.0"/>
+</graphics>
+<name>
+<value>T3</value>
+<graphics>
+<offset x="-5.0" y="35.0"/>
+</graphics>
+</name>
+<orientation>
+<value>0</value>
+</orientation>
+<rate>
+<value>1.0</value>
+</rate>
+<timed>
+<value>false</value>
+</timed>
+<infiniteServer>
+<value>false</value>
+</infiniteServer>
+<priority>
+<value>1</value>
+</priority>
+</transition>
+<arc id="Proces1 to T0" source="Proces1" target="T0">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="311" y="107" curvePoint="false"/>
+<arcpath id="001" x="381" y="132" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Proces1Z to T1" source="Proces1Z" target="T1">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="355" y="261" curvePoint="false"/>
+<arcpath id="001" x="441" y="227" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Proces2 to T2" source="Proces2" target="T2">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="657" y="106" curvePoint="false"/>
+<arcpath id="001" x="571" y="132" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Proces2Z to T3" source="Proces2Z" target="T3">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="628" y="275" curvePoint="false"/>
+<arcpath id="001" x="526" y="227" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="T0 to Proces1Z" source="T0" target="Proces1Z">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="387" y="147" curvePoint="false"/>
+<arcpath id="001" x="347" y="252" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="T1 to Proces1" source="T1" target="Proces1">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="442" y="217" curvePoint="false"/>
+<arcpath id="001" x="308" y="111" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="T1 to Zasob" source="T1" target="Zasob">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="447" y="207" curvePoint="false"/>
+<arcpath id="001" x="472" y="131" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="T2 to Proces2Z" source="T2" target="Proces2Z">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="567" y="147" curvePoint="false"/>
+<arcpath id="001" x="634" y="268" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="T3 to Proces2" source="T3" target="Proces2">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="527" y="217" curvePoint="false"/>
+<arcpath id="001" x="660" y="111" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="T3 to Zasob" source="T3" target="Zasob">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="522" y="207" curvePoint="false"/>
+<arcpath id="001" x="483" y="130" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Zasob to T0" source="Zasob" target="T0">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="462" y="119" curvePoint="false"/>
+<arcpath id="001" x="391" y="132" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+<arc id="Zasob to T2" source="Zasob" target="T2">
+<graphics/>
+<inscription>
+<value>Default,1</value>
+<graphics/>
+</inscription>
+<tagged>
+<value>false</value>
+</tagged>
+<arcpath id="000" x="491" y="119" curvePoint="false"/>
+<arcpath id="001" x="561" y="132" curvePoint="false"/>
+<type value="normal"/>
+</arc>
+</net>
+</pnml>
