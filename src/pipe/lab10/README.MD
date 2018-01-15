@@ -38,9 +38,9 @@ Ktore rownanie mowi nam o rozmiarze bufora ?
 W zadaniu został użyty gotowy model przykłądów.
 Mamy dwa procesy(jednego producenta i jednego konsumenta) oraz pusty bufor o rozmiarze 3.
 
-![Model (zadanie 4)](imgs/Zadanie4_1)
+![Model (zadanie 4)](imgs/Zadanie4_1.PNG)
 
-![Model w trakcie działania (zadanie 4)](imgs/Zadanie4_2)
+![Model w trakcie działania (zadanie 4)](imgs/Zadanie4_2.PNG)
 
 ### Analiza
 
@@ -51,11 +51,11 @@ Równanie mówiące o rozmiarze bufora to :
 M(P6) + M(P7) = 3
 ```
 
-![State Space Analysis (zadanie 4)](imgs/Zadanie4_3)
+![State Space Analysis (zadanie 4)](imgs/Zadanie4_3.PNG)
 
-![Reachability/Coverability Graph (zadanie 4)](imgs/Zadanie4_4)
+![Reachability/Coverability Graph (zadanie 4)](imgs/Zadanie4_4.PNG)
 
-![Invariant Analisis (zadanie 4)](imgs/Zadanie4_5)
+![Invariant Analisis (zadanie 4)](imgs/Zadanie4_5.PNG)
 
 ## Zadanie 5
 
