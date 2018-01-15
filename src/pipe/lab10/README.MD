@@ -37,19 +37,19 @@ Wymyslic wlasna maszyne stanow, zasymulowac przyklad i dokonac analizy grafu osi
 
 Model przedstawia działanie funkcji fork.
 
-![Model (zadanie1)](imgs/Zadanie1_1.PNG)
+![Model (zadanie 1)](imgs/Zadanie1_1.PNG)
 
-![Model w trakcie działania (zadanie1)](imgs/Zadanie1_2.PNG)
+![Model w trakcie działania (zadanie 1)](imgs/Zadanie1_2.PNG)
 
 ### Analiza
 
 Zadanie omówione na zajeciach.
 
-![State Space Analysis (zadanie1)](imgs/Zadanie1_3.PNG)
+![State Space Analysis (zadanie 1)](imgs/Zadanie1_3.PNG)
 
-![Reachability/Coverability Graph (zadanie1)](imgs/Zadanie1_4.PNG)
+![Reachability/Coverability Graph (zadanie 1)](imgs/Zadanie1_4.PNG)
 
-![Invariant Analisis (zadanie1)](imgs/Zadanie1_5.PNG)
+![Invariant Analisis (zadanie 1)](imgs/Zadanie1_5.PNG)
 
 ## Zadanie 2
 
@@ -65,20 +65,20 @@ Prosze wywnioskowac czy jest ograniczona. Objasnic wniosek.
 
 Model przedstawia działanie licznika liczącego do inf.
 
-![Model (zadanie2)](imgs/Zadanie2_1.PNG)
+![Model (zadanie 2)](imgs/Zadanie2_1.PNG)
 
-![Model w trakcie działania (zadanie2)](imgs/Zadanie2_2.PNG)
+![Model w trakcie działania (zadanie 2)](imgs/Zadanie2_2.PNG)
 
 ### Analiza
 
 Zadanie omówione na zajeciach.
 3336 to inf w programie.
 
-![State Space Analysis (zadanie2)](imgs/Zadanie2_3.PNG)
+![State Space Analysis (zadanie 2)](imgs/Zadanie2_3.PNG)
 
-![Reachability/Coverability Graph (zadanie2)](imgs/Zadanie2_4.PNG)
+![Reachability/Coverability Graph (zadanie 2)](imgs/Zadanie2_4.PNG)
 
-![Invariant Analisis (zadanie2)](imgs/Zadanie2_5.PNG)
+![Invariant Analisis (zadanie 2)](imgs/Zadanie2_5.PNG)
 
 ## Zadanie 3
 
@@ -93,9 +93,9 @@ Ktore rownanie pokazuje dzialanie ochrony sekcji krytycznej?
 Model przedstawia działanie dwóch procesów które pobierają zasób, wykonują akcje i oddają zasób.
 Zasób może mieć tylko jeden proces naraz.
 
-![Model (zadanie3)](imgs/Zadanie3_1.PNG)
+![Model (zadanie 3)](imgs/Zadanie3_1.PNG)
 
-![Model w trakcie działania (zadanie3)](imgs/Zadanie3_2.PNG)
+![Model w trakcie działania (zadanie 3)](imgs/Zadanie3_2.PNG)
 
 ### Analiza
 
@@ -105,11 +105,11 @@ Reachability/Coverability Graph pokazuję że sięć ma tylko 3 stany(któryś z
 Pierwsze dwa równania P-invariant mówia nam że procesy mają swóje osobne cykle stanów.
 Ostatnie równanie mówi nam że zasób może być tylko u jednego procesu naraz albo być wolny.
 
-![State Space Analysis (zadanie3)](imgs/Zadanie3_3.PNG)
+![State Space Analysis (zadanie 3)](imgs/Zadanie3_3.PNG)
 
-![Reachability/Coverability Graph (zadanie3)](imgs/Zadanie3_4.PNG)
+![Reachability/Coverability Graph (zadanie 3)](imgs/Zadanie3_4.PNG)
 
-![Invariant Analisis (zadanie3)](imgs/Zadanie3_5.PNG)
+![Invariant Analisis (zadanie 3)](imgs/Zadanie3_5.PNG)
 
 ## Zadanie 4
 
@@ -156,9 +156,9 @@ Zaobserwowac brak pelnego pokrycia miejsc.
 
 Model jest uproszceniem modelu z poprzedniego zadania, po przez usunięcie rozmiaru bufora.
 
-![Model (zadanie5)](imgs/Zadanie5_1.PNG)
+![Model (zadanie 5)](imgs/Zadanie5_1.PNG)
 
-![Model w trakcie działania (zadanie5)](imgs/Zadanie5_2.PNG)
+![Model w trakcie działania (zadanie 5)](imgs/Zadanie5_2.PNG)
 
 ### Analiza
 
@@ -169,11 +169,11 @@ Wynika to z faktu że producent może tworzyć szybciej niż konsument pobierać
 Sytuacja jest mocno losowa i zmiena bo zależy od tego jaka bedzie kolejność działania(może działąć np tylko producent).
 Tym samym Reachability/Coverability Graph nie jest w stanie wygenerować grafu.
 
-![State Space Analysis (zadanie5)](imgs/Zadanie5_3.PNG)
+![State Space Analysis (zadanie 5)](imgs/Zadanie5_3.PNG)
 
-![Reachability/Coverability Graph (zadanie5)](imgs/Zadanie5_4.PNG)
+![Reachability/Coverability Graph (zadanie 5)](imgs/Zadanie5_4.PNG)
 
-![Invariant Analisis (zadanie5)](imgs/Zadanie5_5.PNG)
+![Invariant Analisis (zadanie 5)](imgs/Zadanie5_5.PNG)
 
 ## Zadanie 6
 
@@ -190,11 +190,11 @@ Został użyty model z treści zadania.
 Symuluję on sytuacje gdzie każdy proces może wykonać dwie akcje A lub B.
 Jednak aby ich akcja się powiodła oba muszą wybrać tą samą akcje.
 
-![Model (zadanie6)](imgs/Zadanie6_1.PNG)
+![Model (zadanie 6)](imgs/Zadanie6_1.PNG)
 
-![Model w trakcie działania (zadanie6)](imgs/Zadanie6_2.PNG)
+![Model w trakcie działania (zadanie 6)](imgs/Zadanie6_2.PNG)
 
-![Model w trakcie działania - deadlock (zadanie6)](imgs/Zadanie6_3.PNG)
+![Model w trakcie działania - deadlock (zadanie 6)](imgs/Zadanie6_3.PNG)
 
 ### Analiza
 
@@ -203,8 +203,8 @@ Podaje on też jedna z najkrótszych scieżek. Czyli jedne proces wybiera opcje 
 Jest to sieć ograniczona ponieważ nie są tworzone dodatkowe tokeny.
 Na Reachability/Coverability Graph widzimy że stanami zakleszczenia są takie stany z których nie ma wychodzących strzałek(S6 i S7).
 
-![State Space Analysis (zadanie6)](imgs/Zadanie6_4.PNG)
+![State Space Analysis (zadanie 6)](imgs/Zadanie6_4.PNG)
 
-![Reachability/Coverability Graph (zadanie6)](imgs/Zadanie6_5.PNG)
+![Reachability/Coverability Graph (zadanie 6)](imgs/Zadanie6_5.PNG)
 
-![Invariant Analisis (zadanie6)](imgs/Zadanie6_6.PNG)
+![Invariant Analisis (zadanie 6)](imgs/Zadanie6_6.PNG)
