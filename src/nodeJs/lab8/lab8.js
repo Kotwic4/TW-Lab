@@ -3,6 +3,12 @@ let waterfall = require("async/waterfall");
 let forkWait = 0;
 let condWait = 0;
 
+let N = 10;
+
+function random (low, high) {
+    return Math.random() * (high - low) + low;
+}
+
 let Fork = function() {
     this.state = 0;
     return this;
@@ -106,10 +112,6 @@ Philosopher.prototype.startNaive = function(count) {
     waterfall(task,function(err,result){console.log("done " + id);})
 };
 
-function random (low, high) {
-    return Math.random() * (high - low) + low;
-}
-
 
 Philosopher.prototype.startAsym = function(count) {
     let forks = this.forks,
@@ -153,7 +155,6 @@ Philosopher.prototype.startAsym = function(count) {
         console.log("cond " + condWait);})
 };
 
-let N = 10;
 let cond = new Conductor(N);
 
 Philosopher.prototype.startConductor = function(count) {
